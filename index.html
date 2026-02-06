@@ -436,10 +436,24 @@
   }
 
   footer {
-    padding-top: 2rem;
+    padding: 2rem 1.25rem 2.5rem;
     font-size: 0.8rem;
     color: var(--text-muted);
     text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  footer p {
+    margin: 0 0 0.5rem;
+  }
+
+  footer a {
+    color: var(--text-muted);
+    margin: 0 0.75rem;
+  }
+
+  footer a:hover {
+    color: var(--accent);
   }
   /* HORIZONTAL VIDEO CAROUSEL */
 
@@ -564,57 +578,57 @@
   <main class="page">
     <!-- HERO / LANDING -->
     <section id="hero" class="section">
-      <div class="grid-2">
-        <div>
-          <h1 class="hero-title">
-            CoWTracker: Tracking by Warping instead of Correlation
-          </h1>
+      <div>
+        <h1 class="hero-title">
+          CoWTracker: Tracking by Warping instead of Correlation
+        </h1>
 
-          <p class="hero-subtitle">
-            Dense point tracking and optical flow with a simple <b>warping-based</b>
-            architecture that avoids cost volumes, yet achieves
-            state-of-the-art results on TAP-Vid and RoboTAP and strong
-            zero-shot optical flow.
+        <p class="hero-subtitle">
+          Dense point tracking and optical flow with a simple <b>warping-based</b>
+          architecture that avoids cost volumes, yet achieves
+          state-of-the-art results on TAP-Vid and RoboTAP and strong
+          zero-shot optical flow.
+        </p>
+
+        <div class="hero-authors">
+          <p class="authors-list">
+            <span class="author">Zihang Lai<sup>1,2</sup></span>
+            <span class="author">Eldar Insafutdinov<sup>1</sup></span>
+            <span class="author">Edgar Sucar<sup>1</sup></span>
+            <span class="author">Andrea Vedaldi<sup>1,2</sup></span>
           </p>
-
-          <div class="hero-authors">
-            <p class="authors-list">
-              <span class="author">Zihang Lai<sup>1,2</sup></span>
-              <span class="author">Eldar Insafutdinov<sup>1</sup></span>
-              <span class="author">Edgar Sucar<sup>1</sup></span>
-              <span class="author">Andrea Vedaldi<sup>1,2</sup></span>
-            </p>
-            <p class="institutions">
-              <sup>1</sup>Visual Geometry Group, University of Oxford &nbsp;&nbsp;
-              <sup>2</sup>Meta AI
-            </p>
-          </div>
-
-          <div class="hero-buttons">
-            <a class="btn btn-primary" href="cowtracker.pdf" target="_blank" rel="noreferrer">
-              <span class="icon">📄</span>
-              <span>Paper (PDF)</span>
-            </a>
-            <a class="btn" href="https://arxiv.org/abs/2602.04877" target="_blank" rel="noreferrer">
-              <span class="icon">📚</span>
-              <span>arXiv</span>
-            </a>
-            <a class="btn" href="https://github.com/facebookresearch/cowtracker" target="_blank" rel="noreferrer">
-              <span class="icon">💻</span>
-              <span>Code &amp; Models</span>
-            </a>
-            <a class="btn" href="https://huggingface.co/spaces/facebook/cowtracker" target="_blank" rel="noreferrer">
-              <span class="icon">🤗</span>
-              <span>Hugging Face Demo</span>
-            </a>
-            <a class="btn" href="https://youtu.be/QQP8TZPMZMw" target="_blank" rel="noreferrer">
-              <span class="icon">🎬</span>
-              <span>Video</span>
-            </a>
-          </div>
+          <p class="institutions">
+            <sup>1</sup>Visual Geometry Group, University of Oxford &nbsp;&nbsp;
+            <sup>2</sup>Meta AI
+          </p>
         </div>
 
-        <video controls autoplay loop muted src="videos/web_hero_video.mp4" style="width: 100%; border-radius: 0.75rem;"></video>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="cowtracker.pdf" target="_blank" rel="noreferrer">
+            <span class="icon">📄</span>
+            <span>Paper (PDF)</span>
+          </a>
+          <a class="btn" href="https://arxiv.org/abs/2602.04877" target="_blank" rel="noreferrer">
+            <span class="icon">📚</span>
+            <span>arXiv</span>
+          </a>
+          <a class="btn" href="https://github.com/facebookresearch/cowtracker" target="_blank" rel="noreferrer">
+            <span class="icon">💻</span>
+            <span>Code &amp; Models</span>
+          </a>
+          <a class="btn" href="https://huggingface.co/spaces/facebook/cowtracker" target="_blank" rel="noreferrer">
+            <span class="icon">🤗</span>
+            <span>Hugging Face Demo</span>
+          </a>
+          <a class="btn" href="https://youtu.be/QQP8TZPMZMw" target="_blank" rel="noreferrer">
+            <span class="icon">🎬</span>
+            <span>Video</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-figure" style="margin-top: 1.5rem;">
+        <video controls autoplay loop muted src="videos/web_hero_video.mp4" style="width: 100%; border-radius: 0.75rem; display: block;"></video>
       </div>
     </section>
 
@@ -1085,10 +1099,13 @@
       </div>
     </section>
 
-    <!-- <footer> -->
-      <!-- &copy; 2025 CoWTracker authors. All rights reserved. -->
-    <!-- </footer> -->
   </main>
+
+  <footer>
+    <p>Copyright &copy; 2025 Meta Platforms, Inc</p>
+    <a href="https://opensource.fb.com/legal/terms">Terms of Use</a>
+    <a href="https://opensource.fb.com/legal/privacy">Privacy Policy</a>
+  </footer>
   <script>
     document.querySelectorAll('.video-carousel').forEach(function (carousel) {
         const track = carousel.querySelector('.video-track');
